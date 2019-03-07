@@ -5,6 +5,12 @@ fac n = n * fac (n-1)
 
 --types
 
+--laziness
+
+loop = loop
+foo bar baz = bar * 2
+foo 4 loop = 8
+
 --infinite lists
 
 [1..]
@@ -25,7 +31,7 @@ take 100 [x^2 | x <- [1..], even x]
 
 --sieve (p:xs) = p : sieve [x | x <- xs, x `mod` p /= 0]
 primes = sieve [2..]
-primes !! 1000 
+primes !! 1000
 
 --zip with
 
